@@ -1,0 +1,23 @@
+/**
+ * Main Application JS Script
+ */
+document.addEventListener("DOMContentLoaded", function () {
+    // Sidebar toggle for mobile
+    const toggleBtn = document.getElementById("sidebarToggle");
+    const sidebar = document.querySelector(".sidebar-wrapper");
+
+    if (toggleBtn && sidebar) {
+        toggleBtn.addEventListener("click", function () {
+            sidebar.classList.toggle("show");
+        });
+    }
+
+    // Auto-dismiss alerts after 5 seconds
+    const alerts = document.querySelectorAll(".alert-dismissible");
+    alerts.forEach(function (alert) {
+        setTimeout(function () {
+            const bsAlert = new bootstrap.Alert(alert);
+            bsAlert.close();
+        }, 5000);
+    });
+});
