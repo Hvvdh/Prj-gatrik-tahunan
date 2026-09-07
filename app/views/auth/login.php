@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
     <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     body {
         font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
@@ -138,22 +138,30 @@
 
     .login-footer { position: absolute; bottom: 1.5rem; left: 0; right: 0; text-align: center; font-size: 0.72rem; color: #94a3b8; }
 
-    /* Responsive */
-    @media (max-width: 991.98px) {
-        body { flex-direction: column; overflow-y: auto; }
-        .login-brand-panel { flex: 0 0 auto; padding: 2.5rem 2rem; min-height: 280px; }
-        .login-form-panel { padding: 2rem 1.5rem; }
-        .login-form-panel::before { display: none; }
-        .brand-title { font-size: 1.3rem; }
-    }
-    @media (max-width: 575.98px) {
-        .login-brand-panel { padding: 2rem 1.25rem; min-height: 240px; }
-        .brand-emblem { width: 64px; height: 64px; margin-bottom: 1.25rem; }
-        .brand-title { font-size: 1.1rem; }
-        .feature-pills { display: none; }
-        .form-header h1 { font-size: 1.4rem; }
-    }
-</style>
+        /* ========== RESPONSIVE ========== */
+        @media (max-width: 991.98px) {
+            body { flex-direction: column; overflow-y: auto; }
+            .login-brand-panel {
+                flex: 0 0 auto;
+                padding: 2.5rem 2rem;
+                min-height: 320px;
+            }
+            .login-form-panel {
+                padding: 2rem 1.5rem;
+            }
+            .login-form-panel::before { display: none; }
+            .brand-title { font-size: 1.3rem; }
+        }
+
+        @media (max-width: 575.98px) {
+            .login-brand-panel { padding: 2rem 1.25rem; min-height: 260px; }
+            .brand-emblem { width: 64px; height: 64px; border-radius: 16px; margin-bottom: 1.25rem; }
+            .brand-emblem i { font-size: 1.5rem; }
+            .brand-title { font-size: 1.1rem; }
+            .feature-pills { display: none; }
+            .form-header h1 { font-size: 1.4rem; }
+        }
+    </style>
 </head>
 <body>
 

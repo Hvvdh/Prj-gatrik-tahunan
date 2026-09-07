@@ -1,3 +1,4 @@
+
 <?php $user = AuthHelper::user(); ?>
 <div class="govt-header-wrapper">
     <header class="govt-header-main">
