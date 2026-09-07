@@ -1,34 +1,21 @@
 <?php $user = AuthHelper::user(); ?>
 <div class="govt-header-wrapper">
-    <!-- MAIN TOP BAR -->
     <header class="govt-header-main">
         <div class="d-flex align-items-center">
-            <button id="sidebarToggle" class="btn text-white me-3 d-lg-none fs-5 p-0">
+            <button id="sidebarToggle" class="btn text-secondary me-3 d-lg-none fs-5 p-2" style="border-radius: 8px;">
                 <i class="fas fa-bars"></i>
             </button>
             <a href="<?= BASE_URL ?>/dashboard" class="govt-brand">
-                <!-- SVG Emblem Logo Pemprov Kalsel Benchmark -->
-                <div class="govt-emblem-logo">
-                    <svg viewBox="0 0 100 100" width="30" height="30">
-                        <polygon points="50,5 90,25 90,75 50,95 10,75 10,25" fill="#eab308" stroke="#15803d" stroke-width="4"/>
-                        <rect x="25" y="30" width="50" height="40" rx="5" fill="#166534" />
-                        <path d="M 50 15 L 60 40 L 40 40 Z" fill="#dc2626"/>
-                        <circle cx="50" cy="50" r="12" fill="#ffffff" />
-                        <path d="M 50 42 L 54 50 L 46 50 Z" fill="#eab308"/>
-                    </svg>
-                </div>
                 <span class="govt-app-title">PELAPORAN USAHA KETENAGALISTRIKAN KALIMANTAN SELATAN</span>
             </a>
         </div>
 
         <div class="d-flex align-items-center gap-3">
-            <!-- Notification Bell Icon -->
+            <!-- Notification -->
             <div class="dropdown">
-                <button class="btn text-white position-relative p-1 border-0" type="button" data-bs-toggle="dropdown" aria-label="Notifikasi">
-                    <i class="far fa-bell fs-5"></i>
-                    <span class="position-absolute top-0 start-100 translate-middle p-1 bg-danger border border-light rounded-circle">
-                        <span class="visually-hidden">Notifikasi</span>
-                    </span>
+                <button class="header-notification-btn" type="button" data-bs-toggle="dropdown" aria-label="Notifikasi">
+                    <i class="far fa-bell"></i>
+                    <span class="badge-dot"></span>
                 </button>
                 <ul class="dropdown-menu dropdown-menu-end shadow-lg border-0 mt-2" style="width: 320px;">
                     <li class="dropdown-header fw-bold text-uppercase fs-8 text-muted border-bottom py-2">Notifikasi Sistem</li>
@@ -42,19 +29,15 @@
                 </ul>
             </div>
 
-            <!-- User Profile Dropdown -->
+            <!-- User Profile -->
             <div class="dropdown">
-                <a href="#" class="header-user-profile dropdown-toggle" data-bs-toggle="dropdown">
-                    <div class="d-none d-sm-block">
+                <a href="#" class="header-user-profile dropdown-toggle text-decoration-none" data-bs-toggle="dropdown">
+                    <div class="d-none d-sm-block text-end">
                         <div class="header-user-name"><?= e($user['full_name'] ?? 'Administrator') ?></div>
                         <div class="header-user-role"><?= e($user['role_name'] ?? 'ADMIN') ?></div>
                     </div>
                     <div class="header-user-avatar">
-                        <svg viewBox="0 0 100 100" width="28" height="28">
-                            <polygon points="50,5 90,25 90,75 50,95 10,75 10,25" fill="#eab308" stroke="#15803d" stroke-width="4"/>
-                            <rect x="25" y="30" width="50" height="40" rx="5" fill="#166534" />
-                            <path d="M 50 15 L 60 40 L 40 40 Z" fill="#dc2626"/>
-                        </svg>
+                        <i class="fas fa-user text-white"></i>
                     </div>
                 </a>
                 <ul class="dropdown-menu dropdown-menu-end shadow-lg border-0 mt-2">
@@ -69,9 +52,4 @@
             </div>
         </div>
     </header>
-
-    <!-- SUB HEADER BAR -->
-    <div class="govt-header-sub">
-        DINAS ENERGI DAN SUMBER DAYA MINERAL PROVINSI KALIMANTAN SELATAN
-    </div>
 </div>
